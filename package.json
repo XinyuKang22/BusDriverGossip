@@ -1,7 +1,7 @@
 {
   "name": "typescript-seed",
   "version": "0.0.1",
-  "description": "",
+  "description": "An auto-updating, opinionated TypeScript seed project. All killer, no filler.",
   "main": "dist",
   "scripts": {
     "build": "tsc",

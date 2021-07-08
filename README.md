@@ -4,6 +4,7 @@ typescript-seed
 An auto-updating, opinionated TypeScript seed project. All killer, no filler.
 
 ![CI Status](https://github.com/agiledigital-labs/typescript-seed/actions/workflows/node.js.yml/badge.svg)
+[![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6ImFnaWxlZGlnaXRhbC1sYWJzIiwicmVwbzEiOiJ0eXBlc2NyaXB0LXNlZWQiLCJpbmNsdWRlTGludCI6ZmFsc2UsImF1dGhvcklkIjoyODg0MiwiaWF0IjoxNjI1NzA3MzE1fQ.uoVhd5ExHwJ0csEsoNNJy3k7X_-rdwcdO8y7AB1UGvQ)](https://www.deepcode.ai/app/gh/agiledigital-labs/typescript-seed/_/dashboard?utm_content=gh%2Fagiledigital-labs%2Ftypescript-seed)
 
 Background Reading
 ==================

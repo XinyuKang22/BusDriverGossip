@@ -21,7 +21,7 @@ What's in the box?
 * Prettier
 * type-coverage, in strict mode with 100% type coverage enforced (do try to keep this as high as you can)
 * Jest, with 100% test coverage enforced (do try to keep this as high as you can)
-* TODO: Stryker, with 100% mutation score (do try to keep this as high as you can)
+* Stryker, with 100% mutation score (do try to keep this as high as you can)
 
 Some notes on security
 ======================
@@ -30,7 +30,7 @@ Some notes on security
 * We use `--ignore-scripts` to minimize the attack surface (see https://snyk.io/blog/ten-npm-security-best-practices/)
 * We use `npm audit` to detect known vulnerabilities in our dependencies (point 9 from the OWASP Top 10)
 * We set `"private": true` in package.json to prevent accidental publishing
-* TODO We keep our type coverage, test coverage and mutation scores as high as practical to help ensure our code is bullet proof
+* We keep our type coverage, test coverage and mutation scores as high as practical to help ensure our code is bulletproof
 * We use [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates) to keep dependencies up-to-date
 * We use static analysis services ([DeepCode](https://www.deepcode.ai/) and [Snyk](https://app.snyk.io)) to detect insecure or suspicious coding patterns in our own code.
 

@@ -9,7 +9,8 @@
     "type-coverage": "type-coverage",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "jest",
-    "mutation-test": "stryker run"
+    "mutation-test": "stryker run",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-sonarjs": "^0.7.0",
     "eslint-plugin-total-functions": "^4.7.2",
+    "husky": "^7.0.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "semantic-release": "^17.4.4",

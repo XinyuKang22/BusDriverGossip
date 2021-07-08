@@ -3,6 +3,8 @@ typescript-seed
 
 An auto-updating, opinionated TypeScript seed project. All killer, no filler.
 
+![CI Status](https://github.com/agiledigital-labs/typescript-seed/actions/workflows/node.js.yml/badge.svg)
+
 Background Reading
 ==================
 

@@ -1,2 +1,5 @@
 dist
 coverage
+reports
+# stryker temp files
+.stryker-tmp

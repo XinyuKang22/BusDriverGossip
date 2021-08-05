@@ -15,6 +15,7 @@ What's in the box?
 * type-coverage, in strict mode with 100% type coverage enforced (do try to keep this as high as you can)
 * Jest, with 100% test coverage enforced (do try to keep this as high as you can)
 * Stryker, with 100% mutation score (do try to keep this as high as you can)
+* A Husky pre-commit hook that runs all of the above
 
 Some notes on security
 ======================

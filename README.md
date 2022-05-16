@@ -11,9 +11,9 @@ What's in the box?
 * TypeScript, with all strictness compiler options enabled
 * ESLint, with an opinionated set of plugins and rules pre-configured for safety
 * Prettier
-* type-coverage, in strict mode with 100% type coverage enforced (do try to keep this as high as you can)
+* [type-coverage](https://github.com/plantain-00/type-coverage), in [strict mode](https://github.com/plantain-00/type-coverage#strict-mode) with 100% type coverage enforced (do try to keep this as high as you can)
 * Jest, with 100% test coverage enforced (do try to keep this as high as you can)
-* Stryker, with 100% mutation score (do try to keep this as high as you can)
+* [Stryker](https://stryker-mutator.io/), with 100% mutation score (do try to keep this as high as you can)
 * A Husky pre-commit hook that runs all of the above
 
 Some notes on security

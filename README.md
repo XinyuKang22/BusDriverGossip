@@ -8,7 +8,7 @@ An auto-updating, opinionated TypeScript seed project. All killer, no filler.
 What's in the box?
 ==================
 
-* TypeScript, with all [strictness]([url](https://www.typescriptlang.org/tsconfig#strict)) compiler options enabled
+* TypeScript, with all [strictness](https://www.typescriptlang.org/tsconfig#strict) compiler options enabled
 * ESLint, with an opinionated set of plugins and rules pre-configured for safety
 * Prettier
 * [type-coverage](https://github.com/plantain-00/type-coverage), in [strict mode](https://github.com/plantain-00/type-coverage#strict-mode) with 100% type coverage enforced (do try to keep this as high as you can)

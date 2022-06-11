@@ -5,7 +5,7 @@
   "main": "dist",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives",
     "type-coverage": "type-coverage",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "jest",

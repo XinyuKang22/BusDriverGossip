@@ -16,6 +16,21 @@ What's in the box?
 * [Stryker](https://stryker-mutator.io/), with 100% mutation score (do try to keep this as high as you can)
 * A [Husky](https://github.com/typicode/husky) pre-commit hook that runs all of the above
 
+Getting started
+===============
+
+1. Create a new repo using this template (big green "use this template" button).
+2. Clone that repo.
+3. Then run the following:
+
+```sh
+npm install
+# compile
+npm run build
+# run the compiled code
+node dist/index.js
+```
+
 Some notes on security
 ======================
 

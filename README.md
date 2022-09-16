@@ -12,7 +12,7 @@ What's in the box?
 * ESLint, with an opinionated set of plugins and rules pre-configured for safety courtesy of https://github.com/agiledigital-labs/eslint-config-agile-digital
 * Prettier
 * [type-coverage](https://github.com/plantain-00/type-coverage), in [strict mode](https://github.com/plantain-00/type-coverage#strict-mode) with 100% type coverage enforced (do try to keep this as high as you can)
-* Jest, with 100% test coverage enforced (do try to keep this as high as you can)
+* [Jest](https://jestjs.io/docs/getting-started), with 100% [test coverage](https://jestjs.io/docs/next/configuration#coveragethreshold-object) enforced (do try to keep this as high as you can)
 * [Stryker](https://stryker-mutator.io/), with 100% mutation score (do try to keep this as high as you can)
 * A [Husky](https://github.com/typicode/husky) pre-commit hook that runs all of the above
 

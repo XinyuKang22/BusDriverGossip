@@ -71,7 +71,7 @@
     "prettier": "2.7.1",
     "semantic-release": "^19.0.5",
     "ts-jest": "29.0.3",
-    "type-coverage": "2.24.0",
+    "type-coverage": "2.24.1",
     "typescript": "^4.8.2"
   },
   "typeCoverage": {

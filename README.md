@@ -12,9 +12,9 @@ What's in the box?
 * [ESLint](https://eslint.org/docs/latest/), with an opinionated set of plugins and rules pre-configured for safety courtesy of https://github.com/agiledigital-labs/eslint-config-agile-digital
 * [Prettier](https://prettier.io/docs/en/index.html)
 * [type-coverage](https://github.com/plantain-00/type-coverage), in [strict mode](https://github.com/plantain-00/type-coverage#strict-mode) with 100% type coverage enforced (do try to keep this as high as you can)
-* [Jest](https://jestjs.io/docs/getting-started), with 100% [test coverage](https://jestjs.io/docs/next/configuration#coveragethreshold-object) enforced (do try to keep this as high as you can)
+* Unit tests via [Jest](https://jestjs.io/docs/getting-started), with 100% [test coverage](https://jestjs.io/docs/next/configuration#coveragethreshold-object) enforced (do try to keep this as high as you can)
 * An example property based test using [fast-check](https://github.com/dubzzz/fast-check).
-* [Stryker](https://stryker-mutator.io/), with 100% mutation score (do try to keep this as high as you can)
+* Mutation testing via [Stryker](https://stryker-mutator.io/), with 100% mutation score (do try to keep this as high as you can)
 * A [Husky](https://github.com/typicode/husky) pre-commit hook that runs all of the above
 
 Getting started

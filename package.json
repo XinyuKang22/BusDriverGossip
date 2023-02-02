@@ -81,6 +81,7 @@
     "detail": true
   },
   "jest": {
+    "roots": ["<rootDir>/src"],
     "preset": "ts-jest",
     "testEnvironment": "node",
     "collectCoverage": true,

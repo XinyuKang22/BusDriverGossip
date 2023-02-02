@@ -1,6 +1,6 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable functional/no-expression-statements */
 /* eslint-disable spellcheck/spell-checker */
-/* eslint-disable functional/prefer-readonly-type */
 /* eslint-disable total-functions/no-unsafe-mutable-readonly-assignment */
 /* eslint-disable functional/no-conditional-statements */
 /* eslint-disable no-console */
@@ -14,11 +14,12 @@ const inputs: readonly (readonly number[])[] = [
   [4, 2, 3, 4, 5],
 ] as const;
 const totalNumberOfDrivers = inputs.length;
+// eslint-disable-next-line functional/prefer-immutable-types
+const initialGossips: readonly (readonly number[])[] = Array.from(Array(totalNumberOfDrivers).keys()).map(i => [i]);
 
 function gossip(
   inputs: readonly (readonly number[])[],
-  // eslint-disable-next-line functional/prefer-immutable-types
-  gossips: (readonly (number | undefined)[])[],
+  gossips: readonly (readonly (number | undefined)[])[],
   count: number
 ): number {
   if (count === totalTime) {
@@ -29,8 +30,7 @@ function gossip(
     (x: readonly number[]) => x[count % x.length]
   );
 
-  // eslint-disable-next-line functional/prefer-immutable-types
-  const updatedGossips: (readonly (number | undefined)[])[] = gossips.map(
+  const updatedGossips: readonly (readonly (number | undefined)[])[] = gossips.map(
     (_, driver) =>
       removeDuplicate(
         indexOfAll(currentStops, currentStops[driver])
@@ -55,5 +55,5 @@ function indexOfAll(arr: readonly (number | undefined)[], val?: number) {
 const removeDuplicate = <T>(arrayWithDuplicates: readonly T[]): readonly T[] =>
   arrayWithDuplicates.filter((n, i) => arrayWithDuplicates.indexOf(n) === i);
 
-const result = gossip(inputs, [[0], [1], [2]], 0);
+const result = gossip(inputs, initialGossips, 0);
 console.log(result === -1 ? "never" : result);

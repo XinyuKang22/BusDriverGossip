@@ -17,7 +17,8 @@ const totalNumberOfDrivers = inputs.length;
 
 function gossip(
   inputs: readonly (readonly number[])[],
-  gossips: readonly (readonly number[])[],
+  // eslint-disable-next-line functional/prefer-immutable-types
+  gossips: (readonly (number | undefined)[])[],
   count: number
 ): number {
   if (count === totalTime) {
@@ -29,12 +30,13 @@ function gossip(
   );
 
   // eslint-disable-next-line functional/prefer-immutable-types
-  const updatedGossips: readonly number[][] = gossips.map((_, driver) =>
-    removeDuplicate(
-      indexOfAll(currentStops, currentStops[driver])
-        .map((theDriver) => gossips[theDriver])
-        .flat()
-    )
+  const updatedGossips: (readonly (number | undefined)[])[] = gossips.map(
+    (_, driver) =>
+      removeDuplicate(
+        indexOfAll(currentStops, currentStops[driver])
+          .map((theDriver) => gossips[theDriver])
+          .flat()
+      )
   );
   console.log(updatedGossips);
   const isGossipComplete = updatedGossips.every(

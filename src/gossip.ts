@@ -1,19 +1,6 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable functional/no-expression-statements */
 /* eslint-disable spellcheck/spell-checker */
 /* eslint-disable total-functions/no-unsafe-mutable-readonly-assignment */
-/* eslint-disable functional/no-conditional-statements */
-
-const totalTime = 480;
-
-// Change the inputs below:
-// const inputs: readonly (readonly number[])[] = [
-//   [3, 1, 2, 3],
-//   [3, 2, 3, 1],
-//   [4, 2, 3, 4, 5],
-// ] as const;
-// const totalNumberOfDrivers = inputs.length;
-// const initialGossips: readonly (readonly number[])[] = Array.from(Array(totalNumberOfDrivers).keys()).map(i => [i]);
 
 export function gossip (inputs: readonly (readonly number[])[]) :number | string {
   // eslint-disable-next-line functional/prefer-immutable-types
@@ -22,11 +9,14 @@ export function gossip (inputs: readonly (readonly number[])[]) :number | string
   return result === -1 ? "never" : result;
 }
 
+const totalTime = 480;
+
 function gossip_(
   inputs: readonly (readonly number[])[],
   gossips: readonly (readonly (number | undefined)[])[],
   count: number
 ): number {
+  // eslint-disable-next-line functional/no-conditional-statements
   if (count === totalTime) {
     return -1;
   }

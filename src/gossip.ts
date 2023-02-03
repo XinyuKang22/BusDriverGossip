@@ -21,9 +21,9 @@ function gossip_(
   if (count === totalTimeMinutes) {
     return -1;
   }
-  const currentStops: readonly number[] = inputs
-    .map((x: readonly number[]) => x[count % x.length])
-    .filter((x?: number): x is number => x !== undefined);
+  const currentStops: readonly (number | undefined)[] = inputs.map(
+    (x: readonly number[]) => x[count % x.length]
+  );
   const updatedGossips: readonly (readonly (number | undefined)[])[] =
     gossips.map((_, driver) =>
       removeDuplicate(

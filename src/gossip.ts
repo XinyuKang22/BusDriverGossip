@@ -1,4 +1,4 @@
-/* eslint-disable spellcheck/spell-checker */
+// eslint-disable-next-line spellcheck/spell-checker
 /* eslint-disable total-functions/no-unsafe-mutable-readonly-assignment */
 
 /**
@@ -41,14 +41,14 @@ function gossip_(
 }
 
 /**
- * Find all occurences of val in arr and return indexes
+ * Find all occurrences of val in arr and return indexes
  * @param arr
  * @param val
  * @returns
  */
 function indexOfAll(arr: readonly (number | undefined)[], val?: number) {
   const empty: readonly number[] = [];
-  return arr.reduce((acc, el, i) => (el === val ? [...acc, i] : acc), empty);
+  return arr.reduce((ac, el, i) => (el === val ? [...ac, i] : ac), empty);
 }
 
 const removeDuplicate = <T>(arrayWithDuplicates: readonly T[]): readonly T[] =>

@@ -6,18 +6,31 @@
 
 import { gossip } from "./gossip";
 
+describe("If there are less than two routes(drivers)", () => {
+  describe("When there is only one driver", () => {
+    it("should return 0", () => {
+      expect(gossip([[1]])).toBe(0);
+    });
+  });
+  describe("When there is no driver", () => {
+    it("should return 0", () => {
+      expect(gossip([])).toBe(0);
+    });
+  });
+});
+
 describe("Given there are at least two routes(drivers)", () => {
   describe("When one or more drivers do not have all the gossips by the end of the day", () => {
     it.each([
       {
         inputs: [
-          [2, 1, 2],
-          [5, 2, 8],
+          [1, 2],
+          [2, 1],
         ],
         expected: "never",
       },
       {
-        inputs: [[1], [2], [0]],
+        inputs: [[1], [2]],
         expected: "never",
       },
       // eslint-disable-next-line functional/prefer-immutable-types

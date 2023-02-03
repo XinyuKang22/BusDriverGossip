@@ -13,6 +13,17 @@ module.exports = {
     es6: true
   },
   plugins: ["jest", "sonarjs", "functional", "@typescript-eslint", "prettier", "total-functions"],
+  "settings": {
+    "immutability": {
+      "overrides": [
+        {
+          "name": "ReadonlyArray",
+          "to": "Immutable",
+          "from": "ReadonlyDeep"
+        }
+      ]
+    }
+  },
   rules: {
     "total-functions/no-unsafe-mutable-readonly-assignment": "error"
   }

@@ -7,12 +7,8 @@
  * @param inputs driver routes
  * @returns
  */
-export function gossip(
-  inputs: readonly (readonly number[])[]
-): number | string {
-  const result = gossip_(inputs, initialGossips(inputs.length), 0);
-  return result === -1 ? "never" : result;
-}
+export const gossip = (inputs: readonly (readonly number[])[]) =>
+  gossip_(inputs, initialGossips(inputs.length), 0);
 
 const totalTimeMinutes = 480;
 
@@ -25,7 +21,7 @@ function gossip_(
   if (count === totalTimeMinutes) {
     return -1;
   }
-  const currentStops: readonly (number | undefined)[] = inputs
+  const currentStops: readonly number[] = inputs
     .map((x: readonly number[]) => x[count % x.length])
     .filter((x?: number): x is number => x !== undefined);
   const updatedGossips: readonly (readonly (number | undefined)[])[] =

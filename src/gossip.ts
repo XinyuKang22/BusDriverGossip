@@ -14,7 +14,7 @@ export const gossip = (
   inputs: readonly (readonly number[])[]
 ): TimeUntilComplete => {
   const result = gossip_(inputs, initialGossips(inputs.length), 0);
-  return result < 0 ? "never" : result;
+  return result === -1 ? "never" : result;
 };
 
 function gossip_(

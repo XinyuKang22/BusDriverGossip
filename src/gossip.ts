@@ -1,16 +1,21 @@
 // eslint-disable-next-line spellcheck/spell-checker
 /* eslint-disable total-functions/no-unsafe-mutable-readonly-assignment */
 
+type TimeUntilComplete = "never" | number;
+const totalTimeMinutes = 480;
+
 /**
  * Find the number of stops it takes to have all drivers on board with the latest gossips.
  * If there is even one driver who does not have all the gossips by the end of the day, return 'never'.
  * @param inputs driver routes
  * @returns
  */
-export const gossip = (inputs: readonly (readonly number[])[]) =>
-  gossip_(inputs, initialGossips(inputs.length), 0);
-
-const totalTimeMinutes = 480;
+export const gossip = (
+  inputs: readonly (readonly number[])[]
+): TimeUntilComplete => {
+  const result = gossip_(inputs, initialGossips(inputs.length), 0);
+  return result < 0 ? "never" : result;
+};
 
 function gossip_(
   inputs: readonly (readonly number[])[],
@@ -46,11 +51,16 @@ function gossip_(
  * @param val
  * @returns
  */
-function indexOfAll(arr: readonly (number | undefined)[], val?: number) {
+const indexOfAll = (arr: readonly (number | undefined)[], val?: number) => {
   const empty: readonly number[] = [];
   return arr.reduce((ac, el, i) => (el === val ? [...ac, i] : ac), empty);
-}
+};
 
+/**
+ *
+ * @param arrayWithDuplicates
+ * @returns a new array with distinct values
+ */
 const removeDuplicate = <T>(arrayWithDuplicates: readonly T[]): readonly T[] =>
   arrayWithDuplicates.filter((n, i) => arrayWithDuplicates.indexOf(n) === i);
 

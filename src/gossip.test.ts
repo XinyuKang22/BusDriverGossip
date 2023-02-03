@@ -21,7 +21,7 @@ describe("Testing", () => {
         [2, 1, 2],
         [5, 2, 8],
       ],
-      expected: -1,
+      expected: "never",
     },
     {
       inputs: [[2], [2], [2]],
